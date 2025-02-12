@@ -132,18 +132,23 @@ body {
 }
 
 .rsvp-form {
-    overflow: hidden;
     max-height: 0;
     opacity: 0;
     visibility: hidden;
-    transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .rsvp-form.active {
-    max-height: 62.5rem;
+    max-height: 700px;
     opacity: 1;
     visibility: visible;
+    padding: 10px 0;
 }
+
+
+
 
 /* Location Components */
 .location-container {

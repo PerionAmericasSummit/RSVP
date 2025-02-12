@@ -212,13 +212,16 @@
 
         rsvpButton.addEventListener('click', function (event) {
             event.preventDefault();
-            rsvpForm.classList.toggle('active');
-            if (rsvpForm.classList.contains('active')) {
+
+            if (!rsvpForm.classList.contains('active')) {
+                rsvpForm.classList.add('active');
                 rsvpForm.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                rsvpForm.classList.remove('active');
             }
         });
 
-        const slides = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('.slide');
         const prevBtn = document.querySelector('.prev-slide');
         const nextBtn = document.querySelector('.next-slide');
         const slideCount = document.querySelector('.slide-count');
